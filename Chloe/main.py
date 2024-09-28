@@ -7,6 +7,12 @@ class HackathonApp:
         self.setup_routes()
         self.counter = 0
 
+        self.test2 = {'info': 2, 'task': 3}
+        self.info = self.test2['info']
+        self.task = self.test2['task']
+        print(self.info)
+        print(self.task)
+
     def setup_routes(self):
         self.app.add_url_rule('/', 'logging', self.logging, methods=['GET', 'POST'])
         self.app.add_url_rule('/register', 'register', self.register, methods=['GET', 'POST'])
@@ -67,6 +73,7 @@ class HackathonApp:
         #=== Counter control ===
         if self.counter > 0:
             self.counter -= 1
+            print(self.counter)
 
         self.title = "Kutas"
         self.content = "FAJNY KUTAS"
@@ -82,8 +89,9 @@ class HackathonApp:
     #=== Forward button ===
     def update_main_f(self):
         #=== Counter control ===
-        if self.counter < len(self.listOfTasks) - 1:
+        if self.counter <  - 1:
             self.counter += 1
+            print(self.counter)
 
         #return 
         return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))

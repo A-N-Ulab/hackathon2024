@@ -1,90 +1,81 @@
-#=== Import libraries ===
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 
+class HackathonApp:
+    def __init__(self):
+        self.app = Flask(__name__)
+        self.setup_routes()
+        self.counter = 0
 
-#=== Create Flask app ===
-app = Flask(__name__)
+    def setup_routes(self):
+        self.app.add_url_rule('/', 'logging', self.logging, methods=['GET', 'POST'])
+        self.app.add_url_rule('/register', 'register', self.register, methods=['GET', 'POST'])
+        self.app.add_url_rule('/user', 'main', self.main, methods=['GET', 'POST'])
+        self.app.add_url_rule('/userUpdateB', 'updateMainB', self.update_main_b)
+        self.app.add_url_rule('/userUpdateF', 'updateMainF', self.update_main_f)
 
+    def logging(self):
+        if request.method == 'POST':
+            if request.form['button'] == 'logIn':
+                email = request.form['email']
+                password = request.form['password']
+                if self.check_login(email, password):
+                    return redirect(url_for('main'))
+                else:
+                    return render_template('login.html', email_placeholder="zły email lub hasło", 
+                                           password_placeholder="zły email lub hasło")
+            elif request.form['button'] == 'regIn':
+                return redirect(url_for('register'))
+        return render_template('login.html', email_placeholder="email", password_placeholder="hasło")
 
-#=== Logging  screen ===
-@app.route('/', methods=['GET', 'POST'])                        #define route and methods
-def logging():
-    #---- Check if the form was submitted ----
-    if request.method == 'POST':
-        #---- Check which button was pressed ----
-        #---- if logIn button was pressed then check login data ----
-        if request.form['button'] == 'logIn':    
-            #---- Get data from form ----
+    def check_login(self, email, password):
+        if email == 'admin' and password == 'admin':
+            return True
+        return False
+
+    def register(self):
+        if request.method == 'POST':
             email = request.form['email']
             password = request.form['password']
-            #
-            valid = checkLogin(email, password)                  #check login data
-            if valid == True:
-                return redirect(url_for('main'))                #redirect to main page
-            else:
-                return render_template('login.html', email_placeholder="zły email lub hasło", 
-                                       password_placeholder="zły email lub hasło")
-        #
-        #---- if regIn button was pressed then redirect to register page ----
-        elif request.form['button'] == 'regIn':
-            return redirect(url_for('register'))                #redirect to register page
+            repPassword = request.form['repassword']
+            name = request.form['name']
+            if request.form['button'] == 'regIn':
+                if self.check_register(email, password, repPassword, name):
+                    return redirect(url_for('main'))
+                else:
+                    return render_template('rejstr.html', email_placeholder="email", 
+                                           password_placeholder="hasło się nie zgadza", 
+                                           repPassword_placeholder="hasło się nie zgadza", 
+                                           name_placeholder="imię")
+        return render_template('rejstr.html', email_placeholder="email",
+                               password_placeholder="hasło", repPassword_placeholder="powtórz hasło", 
+                               name_placeholder="imię")
+
+    def check_register(self, email, password, repPassword, name):
+        if password != repPassword:
+            return False
+        return True
+
+    def main(self):
+        self.listOfTasks = [[1, "info1"], [2, "info2"], [3, "info3"], [4, "task1"], [5, "task2"], [6, "task3"], [7, "task4"], [9, "task5"]]
         
-    return render_template('login.html', email_placeholder="email", password_placeholder="hasło")  
-#
-#=== Check login data ===
-def checkLogin(email, password):
-    if email == None or password == None:
-        return render_template('login.html')
-    elif email == 'admin' and password == 'admin':
-        statusOfLogin = True
-    else:
-        statusOfLogin = False
-    return statusOfLogin
+        return render_template('main.html')
 
+    def update_main_b(self):
+        if self.counter > 0:
+            self.counter -= 1
+        #return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))
+        return jsonify(new_content="""
+        
+        """)
 
-#=== Register ===
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    #=== Check if inputs are filled and button is pressed ===
-    if request.method == 'POST':
-        #---- Read data from form ----
-        email = request.form['email']
-        password = request.form['password']
-        repPassword = request.form['repassword']
-        name = request.form['name']
-        #
-        #---- Check which button was pressed ----
-        if request.form['button'] == 'regIn':
-            valid = checkRegister(email, password, repPassword, name)               #check register data
-            #
-            #---- If data is valid then redirect to main page ----
-            if valid == True:
-                return redirect(url_for('main'))
-            else:
-                return render_template('rejstr.html', email_placeholder="email", 
-                                       password_placeholder="hasło się nie zgadza", 
-                                       repPassword_placeholder="hasło się nie zgadza", 
-                                       name_placeholder="imię")
+    def update_main_f(self):
+        if self.counter < len(self.listOfTasks) - 1:
+            self.counter += 1
+        return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))
 
-    return render_template('rejstr.html', email_placeholder="email",
-                            password_placeholder="hasło", repPassword_placeholder="powtórz hasło", 
-                            name_placeholder="imię")
-#
-#=== Check register data ===
-def checkRegister(email, password, repPassword, name):
-    if email == None or password == None or repPassword == None or name == None:
-        return render_template('rejstr.html')
-    elif password != repPassword:
-        statusOfRegister = False
-    else:
-        statusOfRegister = True
-    return statusOfRegister
+    def run(self):
+        self.app.run(debug=True)
 
-#=== Main user interface ===
-@app.route('/user')
-def main():
-    return render_template('main.html')
-
-#=== Run app ===
 if __name__ == '__main__':
-    app.run(debug=True)
+    app = HackathonApp()
+    app.run()

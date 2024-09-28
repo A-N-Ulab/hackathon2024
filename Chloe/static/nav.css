@@ -23,7 +23,6 @@
     padding: 0.25em;
     width: fit-content;
     height: fit-content;
-    background-color: var(--bg-color);
     
     grid-column: 1/2;
 }

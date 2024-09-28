@@ -1,13 +1,15 @@
 import re
+from collections import Counter
 
 def readTypesOfLines(path):
-    types_of_lines = []
+    word_counter = Counter()
     with open(path, 'r') as file:
         for line in file:
-            match = re.match(r'^(.*?):', line)
+            match = re.match(r'^(.*?):(.*)', line)
             if match:
-                types_of_lines.append(match.group(1))
-    return types_of_lines
+                key = match.group(1).strip()
+                word_counter[key] += 1
+    return dict(word_counter)
 
 def readLine(path, lineNum):
     with open(path, 'r') as file:
@@ -19,3 +21,9 @@ def readLine(path, lineNum):
                 else:
                     return line.strip()
     return None
+
+
+#if __name__ == "__main__":
+#    path = "../static/lessons/lesson1.txt"
+#    print(readTypesOfLines(path))
+#    print(readLine(path, 1))

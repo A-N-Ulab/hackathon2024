@@ -32,3 +32,10 @@ ul{
 .locked:hover{
     transform: none;
 }
+
+.icon{
+    z-index: 5;
+    width: 1em;
+    display: block;
+    margin: 0 auto;
+}

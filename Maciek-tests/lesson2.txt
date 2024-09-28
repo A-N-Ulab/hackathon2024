@@ -1,4 +1,3 @@
-section(lekcja 2)
 Subject: Środek odcinka
 Info:Środkiem odcinka AB, gdzie A=(x1,y1) oraz B=(x2,y2) jest punkt wyznaczony wzorem: /photolink4
 Info:Przykład zadanie: Punkt S=(-4,7) jest środkiem odcinka PQ, gdzie Q=(17,12). Zatem punkt P ma współrzędne...

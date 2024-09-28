@@ -1,4 +1,3 @@
-section(lekcja 4)
 Subject: Równanie okręgu
 Info: Twierdzenie Okrąg o środku w punkcie (a,b) i promieniu r>0, jest zbiorem wszystkich punktów płaszczyzny (x,y) spełniających równanie: (x-a)^2+(y-b)^2=r^2 Jest to równaniem okręgu w postaci kanonicznej. /photolink5
 Task: Dany jest okrąg o równaniu (x+3)^2+(y-4)^2=25 . Środkiem S tego okręgu jest punkt:S=(-3,4)

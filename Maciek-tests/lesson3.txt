@@ -1,4 +1,3 @@
-section(lekcja 3)
 Subject: Równanie prostej przechodzącej przez dwa punkty
 Info: Jeżeli znamy współrzędne dwóch punktów należących do prostej, to możemy wyznaczyć jej równanie. Najczęściej będziemy wyznaczali równanie prostej zapisane w postaci kierunkowej.
 Info: Równanie prostej przechodzącej przez punkty A=(xA,yA) i B=(xB,yB) można zapisać wzorem: (y-yA)(xB-xA)-(yB-yA)(x-xA)=0 W praktyce rzadko korzystamy z tego wzoru. Lepiej sprawdza się metoda opisana w przykładzie.

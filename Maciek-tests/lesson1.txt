@@ -1,4 +1,3 @@
-section(lekcja 1)
 Subject: Długość odcinka
 Info: Długość odcinka o końcach w punktach A=(x1,y1) oraz B=(x2,y2) wyraża się wzorem:/photolink1
 Info: Powyższe wynika z twierdzenia Pitagorasa dla trójkąta prostokątnego(tylko tutaj operujemy układem współrzędnych jako danymi wejściowymi). /photolink2

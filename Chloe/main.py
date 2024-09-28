@@ -6,6 +6,8 @@ class HackathonApp:
         self.app = Flask(__name__)
         self.setup_routes()
         self.counter = 0
+        self.msgPrev = "Poprzedni"
+        self.msgNext = "Następny"
 
     def setup_routes(self):
         self.app.add_url_rule('/', 'logging', self.logging, methods=['GET', 'POST'])
@@ -56,8 +58,11 @@ class HackathonApp:
             return False
         return True
 
+
+
+
     def main(self):
-        return render_template('main.html')
+        return render_template('main.html', textPrevious=self.msgPrev, textNext=self.msgNext)
 
 
 #-------------------------------------------------------------------------------------
@@ -84,6 +89,17 @@ class HackathonApp:
         #=== Counter control ===
         if self.counter < len(self.listOfTasks) - 1:
             self.counter += 1
+        elif self.counter == len(self.listOfTasks) - 1:
+            self.msgNext = "Zakończ"
+            return jsonify(new_content="""
+            <div class="task">
+                <h2 class="taskTitle">{title}</h2>
+                <p class="taskContent">{content}</p>
+                <form method="post">
+                    <input>
+                </form>
+            </div>
+            """.format(title=self.title, content=self.content))
 
         #return 
         return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))

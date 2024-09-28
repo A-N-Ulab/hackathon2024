@@ -23,20 +23,23 @@ for index in range(0, len(sections), 2):
     print(f"Section: {section_title}\n")
 
     # Find all relevant information within the section content
-    temat_match = re.search(r'Subject:\s*(.*)', section_content)
+    subject_match = re.search(r'Subject:\s*(.*)', section_content)
     info_matches = re.findall(r'Info:\s*(.*?)(?=\n|$)', section_content, re.DOTALL)
-    zadanie_matches = re.findall(r'Task:\s*(.*?)(?=\n|$)', section_content)
+    task_matches = re.findall(r'Task:\s*(.*?)(?=\n|$)', section_content)
 
-    if temat_match:
-        print(f"  Subject: {temat_match.group(1).strip()}")
+    if subject_match:
+        print(f"  Subject: {subject_match.group(1).strip()}")
 
     if info_matches:
         for i, info in enumerate(info_matches, start=1):
             print(f"  Info {i}: {info.strip()}")
 
-    if zadanie_matches:
-        for j, zadanie in enumerate(zadanie_matches, start=1):
-            print(f"  Task {j}: {zadanie.strip()}")
+    if task_matches:
+        for j, task in enumerate(task_matches, start=1):
+            answer = re.findall(r':\s*(.*)(?=\n|$)', task)
+            
+            print(f"  Task {j}: {task.strip()}")
+            print(f"  Answer {j}: {answer[0].strip()}")
 
     #print()  # Print a newline for better readability
 

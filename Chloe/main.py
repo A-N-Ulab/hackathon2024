@@ -63,9 +63,15 @@ class HackathonApp:
     def update_main_b(self):
         if self.counter > 0:
             self.counter -= 1
+
+        
+
         #return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))
         return jsonify(new_content="""
-        
+        <div class="slide">
+            <h2 class="slideTitle">{{title}}</h2>
+            <p class="slideContent">{{content}}</p>
+        </div>
         """)
 
     def update_main_f(self):

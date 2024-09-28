@@ -1,7 +1,7 @@
 #container {
     background-color: #f0f1f0;
     width: 300px;
-    padding: 45px;
+    padding: 20px 45px;
     margin: 2.5% auto;
     -webkit-box-shadow: 3px 3px 9px 5px rgb(88, 112, 106);
     -moz-box-shadow: 3px 3px 9px 5px rgb(83, 117, 109);
@@ -10,7 +10,8 @@
 }
 
 input[type=text],
-input[type=password] {
+input[type=password],
+input[type=email] {
     margin-top: 10px;
     width: 300px;
     background-color: #f9faf9;
@@ -24,7 +25,8 @@ input[type=password] {
 }
 
 input[type=text]:focus,
-input[type=password]:focus {
+input[type=password]:focus,
+input[type=email]:focus {
     -webkit-box-shadow: 1px 1px 3px 2px rgb(42, 100, 87);
     -moz-box-shadow: 1px 1px 3px 2px rgb(42, 100, 87);
     box-shadow: 1px 1px 3px 2px rgb(42, 100, 87);
@@ -75,6 +77,18 @@ color: var(--sec-color);
 
 
 img{
+    display: block;
     margin: 0 100px;
     width: 100px;
+}
+
+article
+{
+    margin-top: 20px;
+}
+
+a{
+   
+    color: var(--sec-color);
+    text-decoration: underline;
 }

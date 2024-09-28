@@ -18,7 +18,7 @@ body
     --bg-color:#e8f3f5;
     --text:#003f4f;
     --text2:#e8f3f5;
-    --icon-color:#003f4f;
+   --icon-color:#e8f3f5;
    
 
     background-color: var(--bg-color);
@@ -34,30 +34,56 @@ body
     --main-color:#05311d;
     --bg-color:#023e22;
     --text:#e8f3f5;
-    --icon-color:#e8f3f5;
+    
 }
 
 main{
     color: var(--text);
     height: 100vh;
     
-    overflow-y: scroll;
-    padding: 2.5em 5em;
+    
+
+    display: grid;
+    grid-template-columns: 8fr 2fr;
 
 }
 
-img{
-    margin: auto;
+
+
+.content
+{
+    padding: 2.5em;
+    grid-column: 1/2;
+
+    display: grid;
+    grid-template-rows: 7fr 2fr 1fr;
+
 }
 
-
-.icon
-{   
-    padding: 1em;
-    width: 2em;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    color: var(--icon-color);
+.lesson
+{
+    grid-row: 1/2;
 }
 
+.controls
+{
+    grid-row: 2/2;
+}
+
+.sidebar
+{
+    grid-column: 2/2;
+
+    background-color: var(--sec-color);
+}
+
+.sidebar > title
+{
+    background-color: var(--main-color);
+    padding: 0.125em;
+    display: block;
+    color: var(--text2);
+
+
+    text-align: center;
+}

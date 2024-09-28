@@ -20,7 +20,7 @@
 
 }
 .logo{
-    padding: 0.25em;
+    padding: 0;
     width: fit-content;
     height: fit-content;
     background-color: var(--bg-color);
@@ -29,7 +29,7 @@
 }
 
 .logo > img{ 
-    width: 1em;
+    width: 5em;
 }
 
 
@@ -44,15 +44,29 @@
     height: 100%;
     width: 100%;
 
+    font-size: 4em;
+
 
 }
 
-.login
-{  
-    padding: 0;
-    margin: 0;
-    border-left: var(--text2) dotted 0.125em;
-    text-align: center;
-    grid-column: 3/3;
-    height: 100%;
+
+
+img{
+    margin: auto;
+}
+
+
+.icon
+{   
+    padding: 1em;
+    width: 1em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: var(--icon-color);
+}
+
+.icon:hover
+{
+    transform: scale(1.3);
 }

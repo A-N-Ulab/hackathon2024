@@ -8,12 +8,11 @@ class HackathonApp:
         self.counter = 0
         self.msgPrev = "Poprzedni"
         self.msgNext = "Następny"
-
-        self.test2 = {'info': 2, 'task': 3}
-        self.info = self.test2['info']
-        self.task = self.test2['task']
-        print(self.info)
-        print(self.task)
+        self.dictOfTasks = {}
+        self.ls1 = "lBt"
+        self.ls2 = "locked"
+        self.ls3 = "locked"
+        self.ls4 = "locked"
 
     def setup_routes(self):
         self.app.add_url_rule('/', 'logging', self.logging, methods=['GET', 'POST'])
@@ -68,22 +67,33 @@ class HackathonApp:
 
 
     def main(self):
-        return render_template('main.html', textPrevious=self.msgPrev, textNext=self.msgNext)
+        if request.method == 'POST':
+            if request.form['button'] == 'less1':
+                self.dictOfTasks = readTypesOfLines('static/lessons/lesson1.txt')
+                self.counter = 0
+            elif request.form['button'] == 'less2':
+                self.dictOfTasks = readTypesOfLines('static/lessons/lesson2.txt')
+                self.counter = 0
+            elif request.form['button'] == 'less3':
+                self.dictOfTasks = readTypesOfLines('static/lessons/lesson3.txt')
+                self.counter = 0
+            elif request.form['button'] == 'less4':
+                self.dictOfTasks = readTypesOfLines('static/lessons/lesson4.txt')
+                self.counter = 0
 
+            self.numAll = self.dictOfTasks['Info'] + self.dictOfTasks['Task'] 
+        return render_template('main.html', textPrevious=self.msgPrev, textNext=self.msgNext, 
+                               classLesson1=self.ls1, classLesson2=self.ls2, 
+                               classLesson3=self.ls3, classLesson4=self.ls4)
 
-#-------------------------------------------------------------------------------------
 
     #=== Backward button ===
     def update_main_b(self):
         #=== Counter control ===
         if self.counter > 0:
             self.counter -= 1
-            print(self.counter)
-
-        self.title = "Kutas"
-        self.content = "FAJNY KUTAS"
         
-        #if COUNTER==INFO:  
+          
         return jsonify(new_content="""
         <div class="slide">
             <h2 class="slideTitle">{title}</h2>
@@ -94,15 +104,14 @@ class HackathonApp:
     #=== Forward button ===
     def update_main_f(self):
         #=== Counter control ===
-        if self.counter <  - 1:
-            self.counter += 1
+        self.counter += 1
+        if self.counter == self.numAll:
+            self.msgNext = "Zakończ"
+        elif self.counter > self.numAll:
+            self.ls2 = "lBt"
 
         #return 
-        return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))
-
-
-#-------------------------------------------------------------------------------------
-
+        return jsonify()
 
 
     def run(self):

@@ -61,10 +61,12 @@
 <nav class="sidebar">
     <title>Tematy Lekcji</title>
     <ul id="lessonsList">
-        <button class="lBt" id="less1">lekcja 1 - długość odcinka</button>
-        <button class="locked" id="less2">lekcja 2 - środek odcinka</button>
-        <button class="locked" id="less3">lekcja 3 - równanie prostej</button>
-        <button class="locked" id="less4">lekcja 4 - </button>
+    <form method="post">
+        <button class="{{classLesson1}}" id="less1" name="button" value="less1">lekcja 1 - długość odcinka</button>
+        <button class="{{classLesson2}}" id="less2" name="button" value="less2">lekcja 2 - środek odcinka</button>
+        <button class="{{classLesson3}}" id="less3" name="button" value="less3">lekcja 3 - równanie prostej</button>
+        <button class="{{classLesson4}}" id="less4" name="button" value="less4">lekcja 4 - równanie okręgu</button>
+    </form>
     </ul>
 </nav>
 </main>

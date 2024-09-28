@@ -11,21 +11,23 @@ Task: Punkty B=(-2,4) i C=(5,1) są dwoma sąsiednimi wierzchołkami kwadratu AB
 
 section(lekcja 2)
 Subject: Środek odcinka
-Information Page: Środkiem odcinka AB, gdzie A=(x1,y1) oraz B=(x2,y2) jest punkt wyznaczony wzorem: /photolink4
-Information Page: Przykład zadanie: Punkt S=(-4,7) jest środkiem odcinka PQ, gdzie Q=(17,12). Zatem punkt P ma współrzędne...
-Information Page: Rozwiązanie: Sx = -4, Sy = 7, Qx = 17, Qy = 12  Sx =  (Px + Qx)/2  =======>  2Sx = Px + Qx ======> Px = 2Sx - Qx = -8 - 17 = -25 Zamieniamy wzór analogicznie dla współrzędnej y i wychodzi nam wynik:(-25, 2)
-Task: Punkt S=(3,-1) jest środkiem odcinka AB i A=(-3,-5). Punkt B ma współrzędne:(9,3)
-Task: Punkt S=(2,7) jest środkiem odcinka AB, w którym A=(-1,3). Punkt B ma współrzędne:(5,11)
-Task: Punkt S=(4,1) jest środkiem odcinka AB, gdzie A=(a,0) i B=(a+3, 2). Zatem:(2,5)
-Task: Punkty A=(13,-12) i C=(15,8) są przeciwległymi wierzchołkami kwadratu ABCD. Przekątne tego kwadratu przecinają się w punkcie:(14,-2)
-Task: Dane są punkty M=(-2,1) i N=(-1,3). Punkt K jest środkiem odcinka MN. Obrazem punktu K w symetrii względem początku układu współrzędnych jest punkt:(3/2,-2)
+Information:Środkiem odcinka AB, gdzie A=(x1,y1) oraz B=(x2,y2) jest punkt wyznaczony wzorem: /photolink4
+Information:Przykład zadanie: Punkt S=(-4,7) jest środkiem odcinka PQ, gdzie Q=(17,12). Zatem punkt P ma współrzędne...
+Information:Rozwiązanie: Sx = -4, Sy = 7, Qx = 17, Qy = 12  Sx =  (Px + Qx)/2  =======>  2Sx = Px + Qx ======> Px = 2Sx - Qx = -8 - 17 = -25 Zamieniamy wzór analogicznie dla współrzędnej y i wychodzi nam wynik:(-25, 2)
+Task:Punkt S=(3,-1) jest środkiem odcinka AB i A=(-3,-5). Punkt B ma współrzędne:(9,3)
+Task:Punkt S=(2,7) jest środkiem odcinka AB, w którym A=(-1,3). Punkt B ma współrzędne:(5,11)
+Task:Punkt S=(4,1) jest środkiem odcinka AB, gdzie A=(a,0) i B=(a+3, 2). Zatem:(2,5)
+Task:Punkty A=(13,-12) i C=(15,8) są przeciwległymi wierzchołkami kwadratu ABCD. Przekątne tego kwadratu przecinają się w punkcie:(14,-2)
+Task:Dane są punkty M=(-2,1) i N=(-1,3). Punkt K jest środkiem odcinka MN. Obrazem punktu K w symetrii względem początku układu współrzędnych jest punkt:(3/2,-2)
 
 section(lekcja 3)
 Subject: Równanie prostej przechodzącej przez dwa punkty
-Information Page: Jeżeli znamy współrzędne dwóch punktów należących do prostej, to możemy wyznaczyć jej równanie. Najczęściej będziemy wyznaczali równanie prostej zapisane w postaci kierunkowej.
-Information Page: Równanie prostej przechodzącej przez punkty A=(xA,yA) i B=(xB,yB) można zapisać wzorem: (y-yA)(xB-xA)-(yB-yA)(x-xA)=0 W praktyce rzadko korzystamy z tego wzoru. Lepiej sprawdza się metoda opisana w przykładzie.
-Information Page: Przykład: Wyznacz równanie prostej przechodzącej przez punkty A=(5,6) oraz B=(7,11). Rozwiązanie: Zapisujemy równanie prostej w postaci kierunkowej: y=ax+b
-Information Page: Skoro punkt A należy do prostej, to możemy podstawić jego współrzędne do równania tej prostej (pod x współrzędną x-ową punktu A, a pod y współrzędną y-ową punktu A): 6=a⋅5+b
-Information Page: Tak samo możemy podstawić do równania współrzędne punktu B: 11=a⋅7+b W ten sposób otrzymujemy dwa równania z dwiema niewiadomymi a oraz b: 6=5a+b & 11=7a+b
-Information Page: Rozwiązujemy powyższy układ równań, np. odejmując równania stronami: 6-11=5a-7a  -5=-2a   a=5/2
-Information Page: Teraz możemy obliczyć b np. z pierwszego równania: b=6-5a=6-5⋅(5/2)=(12/2)−(25/2)=−(13/2)
+Information: Jeżeli znamy współrzędne dwóch punktów należących do prostej, to możemy wyznaczyć jej równanie. Najczęściej będziemy wyznaczali równanie prostej zapisane w postaci kierunkowej.
+Information: Równanie prostej przechodzącej przez punkty A=(xA,yA) i B=(xB,yB) można zapisać wzorem: (y-yA)(xB-xA)-(yB-yA)(x-xA)=0 W praktyce rzadko korzystamy z tego wzoru. Lepiej sprawdza się metoda opisana w przykładzie.
+Information: Przykład: Wyznacz równanie prostej przechodzącej przez punkty A=(5,6) oraz B=(7,11). Rozwiązanie: Zapisujemy równanie prostej w postaci kierunkowej: y=ax+b
+Information: Skoro punkt A należy do prostej, to możemy podstawić jego współrzędne do równania tej prostej (pod x współrzędną x-ową punktu A, a pod y współrzędną y-ową punktu A): 6=a⋅5+b
+Information: Tak samo możemy podstawić do równania współrzędne punktu B: 11=a⋅7+b W ten sposób otrzymujemy dwa równania z dwiema niewiadomymi a oraz b: 6=5a+b & 11=7a+b
+Information: Rozwiązujemy powyższy układ równań, np. odejmując równania stronami: 6-11=5a-7a  -5=-2a   a=5/2
+Information: Teraz możemy obliczyć b np. z pierwszego równania: b=6-5a=6-5⋅(5/2)=(12/2)−(25/2)=-(13/2)
+Information: Czyli ostatecznie szukane równanie prostej jest postaci: y=(5/2)x-(13/2)
+Task: 

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from BackendPython.mainMenu import readTypesOfLines, readLine
+#from BackendPython.mainMenu import readTypesOfLines, readLine
 
 class HackathonApp:
     def __init__(self):
@@ -8,12 +8,6 @@ class HackathonApp:
         self.counter = 0
         self.msgPrev = "Poprzedni"
         self.msgNext = "Następny"
-
-        self.test2 = {'info': 2, 'task': 3}
-        self.info = self.test2['info']
-        self.task = self.test2['task']
-        print(self.info)
-        print(self.task)
 
     def setup_routes(self):
         self.app.add_url_rule('/', 'logging', self.logging, methods=['GET', 'POST'])
@@ -78,7 +72,6 @@ class HackathonApp:
         #=== Counter control ===
         if self.counter > 0:
             self.counter -= 1
-            print(self.counter)
 
         self.title = "Kutas"
         self.content = "FAJNY KUTAS"
@@ -94,8 +87,19 @@ class HackathonApp:
     #=== Forward button ===
     def update_main_f(self):
         #=== Counter control ===
-        if self.counter <  - 1:
+        if self.counter < len(self.listOfTasks) - 1:
             self.counter += 1
+        elif self.counter == len(self.listOfTasks) - 1:
+            self.msgNext = "Zakończ"
+            return jsonify(new_content="""
+            <div class="task">
+                <h2 class="taskTitle">{title}</h2>
+                <p class="taskContent">{content}</p>
+                <form method="post">
+                    <input>
+                </form>
+            </div>
+            """.format(title=self.title, content=self.content))
 
         #return 
         return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))

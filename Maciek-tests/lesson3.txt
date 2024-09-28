@@ -1,0 +1,14 @@
+section(lekcja 3)
+Subject: Równanie prostej przechodzącej przez dwa punkty
+Info: Jeżeli znamy współrzędne dwóch punktów należących do prostej, to możemy wyznaczyć jej równanie. Najczęściej będziemy wyznaczali równanie prostej zapisane w postaci kierunkowej.
+Info: Równanie prostej przechodzącej przez punkty A=(xA,yA) i B=(xB,yB) można zapisać wzorem: (y-yA)(xB-xA)-(yB-yA)(x-xA)=0 W praktyce rzadko korzystamy z tego wzoru. Lepiej sprawdza się metoda opisana w przykładzie.
+Info: Przykład: Wyznacz równanie prostej przechodzącej przez punkty A=(5,6) oraz B=(7,11). Rozwiązanie: Zapisujemy równanie prostej w postaci kierunkowej: y=ax+b
+Info: Skoro punkt A należy do prostej, to możemy podstawić jego współrzędne do równania tej prostej (pod x współrzędną x-ową punktu A, a pod y współrzędną y-ową punktu A): 6=a⋅5+b
+Info: Tak samo możemy podstawić do równania współrzędne punktu B: 11=a⋅7+b W ten sposób otrzymujemy dwa równania z dwiema niewiadomymi a oraz b: 6=5a+b & 11=7a+b
+Info: Rozwiązujemy powyższy układ równań, np. odejmując równania stronami: 6-11=5a-7a  -5=-2a   a=5/2
+Info: Teraz możemy obliczyć b np. z pierwszego równania: b=6-5a=6-5⋅(5/2)=(12/2)−(25/2)=-(13/2)
+Info: Czyli ostatecznie szukane równanie prostej jest postaci: y=(5/2)x-(13/2)
+Task: Dane są punkty A=(0,2) oraz B=(2,1). Wyznacz równanie prostej AB. :y=−(1/2)x+2
+Task: Dane są punkty A=(6,1) i B=(3,3). Współczynnik kierunkowy prostej AB jest równy:-(3/2)
+Task: Do wykresu funkcji liniowej należą punkty A=(1,2) i B=(−2,5). Funkcja f ma wzór:f(x)=-x+3
+Task: O funkcji liniowej f wiadomo, że f(1)=2. Do wykresu tej funkcji należy punkt P=(−2,3). Wzór funkcji f to:f(x)=-1/3x+7/3

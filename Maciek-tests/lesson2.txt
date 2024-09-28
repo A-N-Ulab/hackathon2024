@@ -1,0 +1,10 @@
+section(lekcja 2)
+Subject: Środek odcinka
+Info:Środkiem odcinka AB, gdzie A=(x1,y1) oraz B=(x2,y2) jest punkt wyznaczony wzorem: /photolink4
+Info:Przykład zadanie: Punkt S=(-4,7) jest środkiem odcinka PQ, gdzie Q=(17,12). Zatem punkt P ma współrzędne...
+Info:Rozwiązanie: Sx = -4, Sy = 7, Qx = 17, Qy = 12  Sx =  (Px + Qx)/2  =======>  2Sx = Px + Qx ======> Px = 2Sx - Qx = -8 - 17 = -25 Zamieniamy wzór analogicznie dla współrzędnej y i wychodzi nam wynik:(-25, 2)
+Task:Punkt S=(3,-1) jest środkiem odcinka AB i A=(-3,-5). Punkt B ma współrzędne:(9,3)
+Task:Punkt S=(2,7) jest środkiem odcinka AB, w którym A=(-1,3). Punkt B ma współrzędne:(5,11)
+Task:Punkt S=(4,1) jest środkiem odcinka AB, gdzie A=(a,0) i B=(a+3, 2). Zatem:(2,5)
+Task:Punkty A=(13,-12) i C=(15,8) są przeciwległymi wierzchołkami kwadratu ABCD. Przekątne tego kwadratu przecinają się w punkcie:(14,-2)
+Task:Dane są punkty M=(-2,1) i N=(-1,3). Punkt K jest środkiem odcinka MN. Obrazem punktu K w symetrii względem początku układu współrzędnych jest punkt:(3/2,-2)

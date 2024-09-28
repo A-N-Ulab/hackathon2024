@@ -1,14 +1,31 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-@app.route('/')
+#website run
+@app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('login.html', message="Hello, Flask with Templates!")
+    if request.method == 'GET':
+        button_clicked = request.args.get('button')
+        print(button_clicked)
+        if button_clicked == 'Zaloguj się':
+            pass
+        elif button_clicked == 'Zarejestruj się':
+            print('Zarejestruj się')
+            return redirect(url_for('register'))
+    return render_template('login.html')
 
-@app.route('/about')
-def about():
-    return "This is the about page."
+#main user interface
+@app.route('/user')
+def login():
+    return render_template('rejstr.html')
+
+#register
+@app.route('/register')
+def register():
+    return render_template('rejstr.html')
+
+#password check
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -19,6 +19,3 @@ def readLine(path, lineNum):
                 else:
                     return line.strip()
     return None
-
-if __name__ == "__main__":
-    print(readLine("../static/lessons/lesson1.txt", 1))

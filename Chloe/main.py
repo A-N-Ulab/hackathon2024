@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
+from BackendPython.mainMenu import readTypesOfLines, readLine
 
 class HackathonApp:
     def __init__(self):
@@ -58,6 +59,9 @@ class HackathonApp:
     def main(self):
         return render_template('main.html')
 
+
+#-------------------------------------------------------------------------------------
+
     #=== Backward button ===
     def update_main_b(self):
         #=== Counter control ===
@@ -83,6 +87,11 @@ class HackathonApp:
 
         #return 
         return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))
+
+
+#-------------------------------------------------------------------------------------
+
+
 
     def run(self):
         self.app.run(debug=True)

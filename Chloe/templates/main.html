@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="../static/nav.css">
     <link rel="stylesheet" href="../static/sidebar.css">
     <link rel="stylesheet" href="../static/buttons.css">
+    <script>
+        function updateForward() {
+            fetch('/userUpdateB')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('chujWie').innerHTML = data.new_content;
+        });
+        }
+        function updateBackward() {
+            fetch('/userUpdateF')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('chujWie').innerHTML = data.new_content;
+        });
+        }
+    </script>
 
     <title>Main</title>
 </head>
@@ -21,49 +37,40 @@
         <div class="logo"><img src="../static/img/chloe-export.png" alt=":("></div>
         <div class="title">Chloe</div>
     </div>
-
-
 </nav>
+
 <main>
     <div class="content" >
         <div id="chujWie" class="lesson">
-
+            <div class="slide">
+                <>
+            </div>
         </div>
 
         <div class="controls">
-            <button class="prev">poprzedni</button>
-            <button class="next">następny</button>
+            <button onclick="updateForward()" class="prev">poprzedni</button>
+            <button onclick="updateBackward()" class="next">następny</button>
         </div>
     </div>
 <nav class="sidebar">
     <title>Tematy Lekcji</title>
-    <ul>
-        <li>lekcja 1
-
-         
-        </li>
-        <li>lekcja 1</li>
-        <li>lekcja 1</li>
-        <li class="locked">lekcja 1</li>    
+    <ul id="lessonsList">
+        <button class="lBt">lekcja 1 - długość odcinka</button>
+        <button class="locked">lekcja 2 - środek odcinka</button>
+        <button class="locked">lekcja 3 - równanie prostej</button>
+        <button class="locked">lekcja 4 - </button>
     </ul>
-
 </nav>
-    
 
 </main>
-
-
-
     <div class="icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-moon-fill"
             viewBox="0 0 16 16">
             <path
                 d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
         </svg>
-
     </div>
-
-<script src="js/darkmode.js"></script>
+<script src="../static/js/darkmode.js"></script>
 
 </body>
 </html>

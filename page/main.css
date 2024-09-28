@@ -1,0 +1,44 @@
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+
+body
+{
+    font-family: "Roboto Mono", monospace;
+    padding: 0;
+    margin: 0;
+    /*color*/
+    --main-color:#023E22;
+    --sec-color:#2a6234;
+    --bg-color:#e8f3f5;
+    --text:#003f4f;
+    --text2:#e8f3f5;
+   
+
+    background-color: var(--bg-color);
+    font: roboto;
+    overflow:hidden;
+
+    
+}
+
+
+
+
+main{
+    color: var(--text);
+    height: 100vh;
+    
+    overflow-y: scroll;
+    padding: 2.5em 5em;
+
+}
+
+img{
+    margin: auto;
+}

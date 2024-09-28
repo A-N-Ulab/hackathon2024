@@ -7,7 +7,6 @@ app = Flask(__name__)
 def home():
     if request.method == 'GET':
         button_clicked = request.args.get('button')
-        print(button_clicked)
         if button_clicked == 'Zaloguj się':
             pass
         elif button_clicked == 'Zarejestruj się':

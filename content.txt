@@ -1,0 +1,11 @@
+{[Temat lekcji: Długość odcinka na płaszczyźnie kartezjańskiej]
+[Długość odcinka o końcach w punktach A=(x1,y1) oraz B=(x2,y2) wyraża się wzorem:
+/photolink1]
+[Powyższe wynika z twierdzenia Pitagorasa dla trójkąta prostokątnego(tylko tutaj operujemy układem współrzędnych jako danymi wejściowymi). /photolink2]
+[Przykład zadania:  Oblicz długość odcinka AB, gdzie A=(1,2), B=(3,7).]
+(1 Zadanie. Dane są punkty P=(−2,−2), Q=(3,3). Odległość punktu P od punktu Q jest równa:5√2)
+(2 Zadanie. Długość odcinka AB, którego wierzchołki mają współrzędne A=(−3,−2) i B=(−1,4), jest równa:2√10)
+(3 Zadanie. Dane są punkty A=(1,−4) i B=(2,3). Odcinek AB ma długość:5√2)
+(4 Zadanie. Na okręgu o środku S=(−6,1) leży punkt A=(−2,4). Promień tego okręgu jest równy:5)
+(5 Zadanie. Punkty B=(−2,4) i C=(5,1) są dwoma sąsiednimi wierzchołkami kwadratu ABCD. Pole tego kwadratu jest równe:58)
+}

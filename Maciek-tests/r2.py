@@ -24,7 +24,7 @@ for index in range(0, len(sections), 2):
 
     # Find all relevant information within the section content
     temat_match = re.search(r'Subject:\s*(.*)', section_content)
-    info_matches = re.findall(r'Information:\s*(.*?)(?=\n|$)', section_content, re.DOTALL)
+    info_matches = re.findall(r'Info:\s*(.*?)(?=\n|$)', section_content, re.DOTALL)
     zadanie_matches = re.findall(r'Task:\s*(.*?)(?=\n|$)', section_content)
 
     if temat_match:
@@ -32,7 +32,7 @@ for index in range(0, len(sections), 2):
 
     if info_matches:
         for i, info in enumerate(info_matches, start=1):
-            print(f"  Information {i}: {info.strip()}")
+            print(f"  Info {i}: {info.strip()}")
 
     if zadanie_matches:
         for j, zadanie in enumerate(zadanie_matches, start=1):

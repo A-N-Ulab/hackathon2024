@@ -56,27 +56,32 @@ class HackathonApp:
         return True
 
     def main(self):
-        self.listOfTasks = [[1, "info1"], [2, "info2"], [3, "info3"], [4, "task1"], [5, "task2"], [6, "task3"], [7, "task4"], [9, "task5"]]
-        
         return render_template('main.html')
 
+    #=== Backward button ===
     def update_main_b(self):
+        #=== Counter control ===
         if self.counter > 0:
             self.counter -= 1
 
+        self.title = "Kutas"
+        self.content = "FAJNY KUTAS"
         
-
-        #return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))
+        #if COUNTER==INFO:  
         return jsonify(new_content="""
         <div class="slide">
-            <h2 class="slideTitle">{{title}}</h2>
-            <p class="slideContent">{{content}}</p>
+            <h2 class="slideTitle">{title}</h2>
+            <p class="slideContent">{content}</p>
         </div>
-        """)
+        """.format(title=self.title, content=self.content))
 
+    #=== Forward button ===
     def update_main_f(self):
+        #=== Counter control ===
         if self.counter < len(self.listOfTasks) - 1:
             self.counter += 1
+
+        #return 
         return jsonify(new_content="{data}".format(data=self.listOfTasks[self.counter][1]))
 
     def run(self):

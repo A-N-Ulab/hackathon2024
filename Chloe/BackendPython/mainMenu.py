@@ -1,12 +1,24 @@
 import re
 
-def read_file(self):
-    with open(self.file_path, 'r', encoding='utf-8') as file:
-         return file.read()
+def readTypesOfLines(path):
+    types_of_lines = []
+    with open(path, 'r') as file:
+        for line in file:
+            match = re.match(r'^(.*?):', line)
+            if match:
+                types_of_lines.append(match.group(1))
+    return types_of_lines
 
-
-def process_sections(self):
-    pass
+def readLine(path, lineNum):
+    with open(path, 'r') as file:
+        for current_line_number, line in enumerate(file, start=1):
+            if current_line_number == lineNum:
+                match = re.match(r'^(.*?):(.*)', line)
+                if match:
+                    return match.group(2).strip()
+                else:
+                    return line.strip()
+    return None
 
 if __name__ == "__main__":
-    file_path = 'content.txt'  # Change this to your actual file path
+    print(readLine("../static/lessons/lesson1.txt", 1))

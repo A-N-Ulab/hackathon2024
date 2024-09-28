@@ -18,6 +18,7 @@ body
     --bg-color:#e8f3f5;
     --text:#003f4f;
     --text2:#e8f3f5;
+    --icon-color:#003f4f;
    
 
     background-color: var(--bg-color);
@@ -28,7 +29,13 @@ body
 }
 
 
-
+.darkMode
+{
+    --main-color:#05311d;
+    --bg-color:#023e22;
+    --text:#e8f3f5;
+    --icon-color:#e8f3f5;
+}
 
 main{
     color: var(--text);
@@ -42,3 +49,15 @@ main{
 img{
     margin: auto;
 }
+
+
+.icon
+{   
+    padding: 1em;
+    width: 2em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: var(--icon-color);
+}
+

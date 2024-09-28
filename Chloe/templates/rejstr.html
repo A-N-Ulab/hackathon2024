@@ -17,13 +17,12 @@
         <div class="title">chloe</div>
         <div class="desc">Twój żabi nauczyciel matematyki skurwysynu</div>
             
-        <form method="post"></form>
-            <input type="text" placeholder="Imię" onfocus="this.placeholder=''" onblur="this.placeholder = 'imię'">     
-            <input type="email" placeholder="email" onfocus="this.placeholder=''" onblur="this.placeholder = 'email'">
-            <input type="password" placeholder="Hasło" onfocus="this.placeholder=''" onblur="this.placeholder = 'Hasło'">
-            <input type="password" placeholder="Powtórz Hasło" onfocus="this.placeholder=''" onblur="this.placeholder = 'Powtórz Hasło'">
-
-            <button type="submit" value="zarejstruj się">Zarejestruj się</button>
+        <form method="post">
+            <input type="text" name="name" placeholder="{{name_placeholder}}" onfocus="this.placeholder=''" onblur="this.placeholder = '{{name_placeholder}}'">     
+            <input type="email" name="email" placeholder="{{email_placeholder}}" onfocus="this.placeholder=''" onblur="this.placeholder = '{{email_placeholder}}'">
+            <input type="password" name="password" placeholder="{{password_placeholder}}" onfocus="this.placeholder=''" onblur="this.placeholder = '{{password_placeholder}}'">
+            <input type="password" name="repassword" placeholder="{{repPassword_placeholder}}" onfocus="this.placeholder=''" onblur="this.placeholder = '{{repPassword_placeholder}}'">
+            <button type="submit" name="button" value="regIn">Zarejestruj się</button>
         </form>
     </div>
 </body>

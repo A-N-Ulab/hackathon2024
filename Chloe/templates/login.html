@@ -16,8 +16,8 @@
         <div class="desc">Twój żabi nauczyciel matematyki skurwysynu</div>
 
         <form method="post">
-            <input name="email" type="text" placeholder="email" onfocus="this.placeholder=''" onblur="this.placeholder = 'Email'">
-            <input name="password" type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder = 'Hasło'">
+            <input name="email" type="text" placeholder="{{ email_placeholder }}" onfocus="this.placeholder=''" onblur="this.placeholder = '{{email_placeholder}}'">
+            <input name="password" type="password" placeholder="{{ password_placeholder }}" onfocus="this.placeholder=''" onblur="this.placeholder = '{{password_placeholder}}'">
             <button type="submit" name="button" value="logIn">Zaloguj się</button>
             <button type="submit" name="button" value="regIn">Zarejestruj się</button>
         </form>

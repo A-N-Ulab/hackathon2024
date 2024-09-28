@@ -9,7 +9,7 @@ Task: Dane są punkty A=(1,-4) i B=(2,3). Odcinek AB ma długość:5√2
 Task: Na okręgu o środku S=(-6,1) leży punkt A=(-2,4). Promień tego okręgu jest równy:5
 Task: Punkty B=(-2,4) i C=(5,1) są dwoma sąsiednimi wierzchołkami kwadratu ABCD. Pole tego kwadratu jest równe:58
 
-section(lekcja 2)
+section(lekcja 2)   
 Subject: Środek odcinka
 Info:Środkiem odcinka AB, gdzie A=(x1,y1) oraz B=(x2,y2) jest punkt wyznaczony wzorem: /photolink4
 Info:Przykład zadanie: Punkt S=(-4,7) jest środkiem odcinka PQ, gdzie Q=(17,12). Zatem punkt P ma współrzędne...

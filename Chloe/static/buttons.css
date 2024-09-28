@@ -1,0 +1,28 @@
+button{
+    background-color: var(--main-color);
+    color: var(--text2);
+
+    border: none;
+    border-radius: 0.5em;
+
+    padding: 0.5em 1em;
+    margin: 2em;
+
+    text-transform: uppercase;
+
+    box-shadow: 1px 1px 1px 0px var(--text2);
+
+}
+
+.controls
+{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    padding: 0.5em;
+}
+
+button:hover
+{
+    transform: scale(1.2);
+    
+}

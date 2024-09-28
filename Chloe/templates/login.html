@@ -5,35 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logowanie</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
-    
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/login.css">
     <link rel="stylesheet" href="../static/main.css">
 </head>
 <body>
     <div id="container">
+        <img src="../static/img/chloe-export.png" alt=":()">
+        <div class="title">chloe</div>
+        <div class="desc">Twój żabi nauczyciel matematyki skurwysynu</div>
 
-
-
-
-        <form>
-            <img src="../static/img/chloe-export.png" alt=":()">
-            <div class="title">
-                chloe
-            </div>
-            <div class="desc">Twój żabi nauczyciel matematyki skurwysynu</div>
-            <input type="text" placeholder="Login" onfocus="this.placeholder=''" onblur="this.placeholder = 'Login'">
-    
-            <input type="password" placeholder="Hasło" onfocus="this.placeholder=''" onblur="this.placeholder = 'Hasło'">
-    
-    
-            <input type="submit" name="button" value="Zaloguj się">
-            <input type="submit" name="button" value="Zarejestruj się">
-    
-    
-    
+        <form method="post">
+            <input name="email" type="text" placeholder="email" onfocus="this.placeholder=''" onblur="this.placeholder = 'Email'">
+            <input name="password" type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder = 'Hasło'">
+            <button type="submit" name="button" value="logIn">Zaloguj się</button>
+            <button type="submit" name="button" value="regIn">Zarejestruj się</button>
         </form>
     </div>
 </body>

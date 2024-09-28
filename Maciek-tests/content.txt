@@ -24,3 +24,8 @@ section(lekcja 3)
 Subject: Równanie prostej przechodzącej przez dwa punkty
 Information Page: Jeżeli znamy współrzędne dwóch punktów należących do prostej, to możemy wyznaczyć jej równanie. Najczęściej będziemy wyznaczali równanie prostej zapisane w postaci kierunkowej.
 Information Page: Równanie prostej przechodzącej przez punkty A=(xA,yA) i B=(xB,yB) można zapisać wzorem: (y-yA)(xB-xA)-(yB-yA)(x-xA)=0 W praktyce rzadko korzystamy z tego wzoru. Lepiej sprawdza się metoda opisana w przykładzie.
+Information Page: Przykład: Wyznacz równanie prostej przechodzącej przez punkty A=(5,6) oraz B=(7,11). Rozwiązanie: Zapisujemy równanie prostej w postaci kierunkowej: y=ax+b
+Information Page: Skoro punkt A należy do prostej, to możemy podstawić jego współrzędne do równania tej prostej (pod x współrzędną x-ową punktu A, a pod y współrzędną y-ową punktu A): 6=a⋅5+b
+Information Page: Tak samo możemy podstawić do równania współrzędne punktu B: 11=a⋅7+b W ten sposób otrzymujemy dwa równania z dwiema niewiadomymi a oraz b: 6=5a+b & 11=7a+b
+Information Page: Rozwiązujemy powyższy układ równań, np. odejmując równania stronami: 6-11=5a-7a  -5=-2a   a=5/2
+Information Page: Teraz możemy obliczyć b np. z pierwszego równania: b=6-5a=6-5⋅(5/2)=(12/2)−(25/2)=−(13/2)

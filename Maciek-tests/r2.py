@@ -4,7 +4,7 @@ import re
 file_path = 'content.txt'  # Change this to your actual file path
 
 try:
-    # Open the file in read mode with UTF-8 encoding
+    # Open the file in read mode with UTF-8 encoding , encoding='utf-8'
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read()
 except FileNotFoundError:

@@ -17,13 +17,36 @@ def readLine(path, lineNum):
             if current_line_number == lineNum:
                 match = re.match(r'^(.*?):(.*)', line)
                 if match:
-                    return match.group(2).strip()
+                    content = match.group(2).strip()
+                    parts = content.split('_', 1)
+                    if len(parts) > 1:
+                        return parts[0].strip()
+                    else:
+                        return content
                 else:
-                    return line.strip()
+                    parts = line.split('_', 1)
+                    if len(parts) > 1:
+                        return parts[0].strip()
+                    else:
+                        return line.strip()
     return None
 
+def readStringAfterUnderscore(path, lineNum):
+    try:
+        with open(path, 'r') as file:
+            for current_line_number, line in enumerate(file, start=1):
+                if current_line_number == lineNum:
+                    parts = line.split('_', 1)
+                    if len(parts) > 1:
+                        return parts[1].strip()
+                    else:
+                        return None
+        return None
+    except:
+        return None
 
-#if __name__ == "__main__":
-#    path = "../static/lessons/lesson1.txt"
-#    print(readTypesOfLines(path))
-#    print(readLine(path, 1))
+if __name__ == "__main__":
+    path = "./static/lessons/lesson1.txt"
+    print(readTypesOfLines(path))
+    print(readLine(path, 1))
+    print(readStringAfterUnderscore(path, 4))

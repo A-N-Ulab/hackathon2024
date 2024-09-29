@@ -1,23 +1,29 @@
 button{
     background-color: var(--main-color);
     color: var(--text2);
-
     border: none;
     border-radius: 0.5em;
-
-    padding: 0.5em 1em;
-    margin: 2em;
-
     text-transform: uppercase;
-
     box-shadow: 1px 1px 1px 0px var(--text2);
+    width: 100%;
+    padding: 1em;
+    margin: 0.5em;
+    display: inline-block;
+}
+.controls{
+    position: absolute;
+    bottom: 0;
+    width: 75%;
 }
 
-.controls
-{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    padding: 0.5em;
+.inputTask{
+    width: 98%;
+    padding: 1em;
+    margin: 0.5em;
+    display: inline-block;
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 1px 0px var(--text2);
 }
 
 button:hover

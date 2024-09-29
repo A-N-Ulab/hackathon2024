@@ -6,7 +6,7 @@ Info: Tak samo możemy podstawić do równania współrzędne punktu B: 11=a⋅7
 Info: Rozwiązujemy powyższy układ równań, np. odejmując równania stronami: 6-11=5a-7a  -5=-2a   a=5/2
 Info: Teraz możemy obliczyć b np. z pierwszego równania: b=6-5a=6-5⋅(5/2)=(12/2)−(25/2)=-(13/2)
 Info: Czyli ostatecznie szukane równanie prostej jest postaci: y=(5/2)x-(13/2)
-Task: Dane są punkty A=(0,2) oraz B=(2,1). Wyznacz równanie prostej AB. :y=−(1/2)x+2
-Task: Dane są punkty A=(6,1) i B=(3,3). Współczynnik kierunkowy prostej AB jest równy:-(3/2)
-Task: Do wykresu funkcji liniowej należą punkty A=(1,2) i B=(−2,5). Funkcja f ma wzór:f(x)=-x+3
-Task: O funkcji liniowej f wiadomo, że f(1)=2. Do wykresu tej funkcji należy punkt P=(−2,3). Wzór funkcji f to:f(x)=-1/3x+7/3
+Task: Dane są punkty A=(0,2) oraz B=(2,1). Wyznacz równanie prostej AB._y=−(1/2)x+2
+Task: Dane są punkty A=(6,1) i B=(3,3). Współczynnik kierunkowy prostej AB jest równy_-(3/2)
+Task: Do wykresu funkcji liniowej należą punkty A=(1,2) i B=(−2,5). Funkcja f ma wzór_f(x)=-x+3
+Task: O funkcji liniowej f wiadomo, że f(1)=2. Do wykresu tej funkcji należy punkt P=(−2,3). Wzór funkcji f to_f(x)=-1/3x+7/3

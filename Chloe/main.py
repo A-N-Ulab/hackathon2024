@@ -4,7 +4,7 @@ from werkzeug.datastructures import ImmutableMultiDict
 
 class HackathonApp:
     '''
-    Class to handle the Flask app for the hackathon project
+    Class to handle the Flask app for the hackathon project 
     '''
 
     #=== Initialize the flask app ===

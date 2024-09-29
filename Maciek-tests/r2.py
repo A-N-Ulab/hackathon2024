@@ -1,7 +1,7 @@
 import re
 
 # Specify the path to your file
-file_path = 'content.txt'  # Change this to your actual file path
+file_path = 'siusiak123.txt'  # Change this to your actual file path
 
 try:
     # Open the file in read mode with UTF-8 encoding , encoding='utf-8'
@@ -36,7 +36,7 @@ for index in range(0, len(sections), 2):
 
     if task_matches:
         for j, task in enumerate(task_matches, start=1):
-            answer = re.findall(r':\s*(.*?)(?=\n|$)', task)
+            answer = re.findall(r'_\s*(.*?)(?=\n|$)', task)
             
             print(f"  Task {j}: {task.strip()}")
             print(f"  Answer {j}: {answer[0].strip()}")

@@ -1,5 +1,4 @@
-# CHLOE MATEMATYCZNA ŻABA
-
+<h1 align="center">CHLOE MATEMATYCZNA ŻABA</h1>
 <p align="center">
   <img alt="Static Badge" src="https://img.shields.io/badge/Chloe-Matematyczna_%C5%BBaba-darkgreen">
   <img alt="Static Badge" src="https://img.shields.io/badge/HackYeah-2024-pink">

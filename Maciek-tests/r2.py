@@ -36,7 +36,7 @@ for index in range(0, len(sections), 2):
 
     if task_matches:
         for j, task in enumerate(task_matches, start=1):
-            answer = re.findall(r':\s*(.*)(?=\n|$)', task)
+            answer = re.findall(r':\s*(.*?)(?=\n|$)', task)
             
             print(f"  Task {j}: {task.strip()}")
             print(f"  Answer {j}: {answer[0].strip()}")

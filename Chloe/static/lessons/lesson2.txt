@@ -1,4 +1,4 @@
-Info:Środkiem odcinka AB, gdzie A=(x1,y1) oraz B=(x2,y2) jest punkt wyznaczony wzorem: /photolink4
+Info:Środkiem odcinka AB, gdzie A=(x1,y1) oraz B=(x2,y2) jest punkt wyznaczony wzorem ;img4
 Info:Przykład zadanie: Punkt S=(-4,7) jest środkiem odcinka PQ, gdzie Q=(17,12). Zatem punkt P ma współrzędne...
 Info:Rozwiązanie: Sx = -4, Sy = 7, Qx = 17, Qy = 12  Sx =  (Px + Qx)/2  =======>  2Sx = Px + Qx ======> Px = 2Sx - Qx = -8 - 17 = -25 Zamieniamy wzór analogicznie dla współrzędnej y i wychodzi nam wynik?_(-25, 2)
 Task:Punkt S=(3,-1) jest środkiem odcinka AB i A=(-3,-5). Punkt B ma współrzędne?_(9,3)

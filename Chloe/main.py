@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from BackendPython.mainMenu import readTypesOfLines, readLine, readStringAfterUnderscore
+from BackendPython.mainMenu import readTypesOfLines, readLine, readStringAfterUnderscore, extractTextAfterColon
 from werkzeug.datastructures import ImmutableMultiDict
 
 class HackathonApp:
@@ -64,7 +64,7 @@ class HackathonApp:
                                name_placeholder="imię")
 
     def check_register(self, email, password, repPassword, name):
-        if password != repPassword:
+        if password != repPassword or password != None and repPassword != None:
             return False
         return True
 
@@ -110,11 +110,12 @@ class HackathonApp:
                                updateForward=False, updateBackward=True)
             
             elif request.form['button'] == 'next':
-                if self.counter < self.dictOfTasks["Task"]-1:
+                print(self.dictOfTasks["Task"]-1)
+                if self.counter <= self.dictOfTasks["Info"]:
                     self.counter += 1
                     self.msgPrev = "Poprzedni"
                     self.msgNext = "Następny"
-                elif self.counter >= self.dictOfTasks["Task"]-1 and self.accept:
+                elif self.counter > self.dictOfTasks["Info"] and self.accept:
                     self.counter += 1
                     self.sol = "Nie rozwiązano"
                     self.accept = False
@@ -147,7 +148,14 @@ class HackathonApp:
 
     #=== Backward button ===
     def update_main_b(self):
-        if self.counter <= self.dictOfTasks["Info"]:
+        if self.counter <= self.dictOfTasks["Info"] and extractTextAfterColon(readLine("static/lessons/" + self.nameOfLesson + ".txt", self.counter)) != None:
+            return jsonify(new_content="""
+                    <div class="task">
+                        <h2>Wyjaśnienie</h2>
+                        <p class="taskContent">{info}</p>
+                        <img class="equ" src="{path}" alt="equation">
+                    </div>""".format(info=readLine("static/lessons/" + self.nameOfLesson + ".txt", self.counter)[:-4], path="static/lessons/"+extractTextAfterColon(readLine("static/lessons/" + self.nameOfLesson + ".txt", self.counter))+".png"))
+        elif self.counter <= self.dictOfTasks["Info"] and extractTextAfterColon(readLine("static/lessons/" + self.nameOfLesson + ".txt", self.counter)) == None:
             return jsonify(new_content="""
                     <div class="task">
                         <h2>Wyjaśnienie</h2>
@@ -156,7 +164,7 @@ class HackathonApp:
         else:
             return jsonify(new_content="""
                     <div class="task">
-                        <h2>Ćwiczenie - {solution}</h2>
+                        <h2>Ćwiczenie - <em>{solution}</em></h2>
                         <p class="taskContent">{task}</p>   
                         <form method="post">
                             <input type="text" name="input" class="inputTask" value="{sign}" placeholder="Rozwiązanie zadania" onfocus="this.placeholder=''" onblur="this.placeholder = 'Rozwiązanie zadania'">
@@ -167,7 +175,15 @@ class HackathonApp:
 
     #=== Forward button ===
     def update_main_f(self):
-        if self.counter <= self.dictOfTasks["Info"]:
+        if self.counter <= self.dictOfTasks["Info"] and extractTextAfterColon(readLine("static/lessons/" + self.nameOfLesson + ".txt", self.counter)) != None:
+            print("static/lessons/"+extractTextAfterColon(readLine("static/lessons/" + self.nameOfLesson + ".txt", self.counter))+".png")
+            return jsonify(new_content="""
+                    <div class="task">
+                        <h2>Wyjaśnienie</h2>
+                        <p class="taskContent">{info}</p>
+                        <img class="equ" src="{path}" alt="equation">
+                    </div>""".format(info=readLine("static/lessons/" + self.nameOfLesson + ".txt", self.counter)[:-5], path="static/lessons/"+extractTextAfterColon(readLine("static/lessons/" + self.nameOfLesson + ".txt", self.counter))+".png"))
+        elif self.counter <= self.dictOfTasks["Info"] and extractTextAfterColon(readLine("static/lessons/" + self.nameOfLesson + ".txt", self.counter)) == None:
             return jsonify(new_content="""
                     <div class="task">
                         <h2>Wyjaśnienie</h2>
@@ -176,7 +192,7 @@ class HackathonApp:
         else:
             return jsonify(new_content="""
                     <div class="task">
-                        <h2>Ćwiczenie - {solution}</h2>
+                        <h2>Ćwiczenie - <em>{solution}</em></h2>
                         <p class="taskContent">{task}</p>   
                         <form method="post">
                             <input type="text" name="input" class="inputTask" value="{sign}" placeholder="Rozwiązanie zadania" onfocus="this.placeholder=''" onblur="this.placeholder = 'Rozwiązanie zadania'">

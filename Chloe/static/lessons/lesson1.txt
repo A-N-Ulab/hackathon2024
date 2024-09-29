@@ -1,6 +1,6 @@
-Info: Długość odcinka o końcach w punktach A=(x1,y1) oraz B=(x2,y2) wyraża się wzorem:/photolink1
-Info: Powyższe wynika z twierdzenia Pitagorasa dla trójkąta prostokątnego(tylko tutaj operujemy układem współrzędnych jako danymi wejściowymi). /photolink2
-Info: Przykład zadania:  Oblicz długość odcinka AB, gdzie A=(1,2), B=(3,7). /photolink3
+Info: Długość odcinka o końcach w punktach A=(x1,y1) oraz B=(x2,y2) wyraża się wzorem;img1
+Info: Powyższe wynika z twierdzenia Pitagorasa dla trójkąta prostokątnego(tylko tutaj operujemy układem współrzędnych jako danymi wejściowymi).;img2
+Info: Przykład zadania:  Oblicz długość odcinka AB, gdzie A=(1,2), B=(3,7).;img3
 Task: Dane są punkty P=(-2,-2), Q=(3,3). Odległość punktu P od punktu Q jest równa_5√2
 Task: Długość odcinka AB, którego wierzchołki mają współrzędne A=(-3,-2) i B=(-1,4), jest równa_2√10
 Task: Dane są punkty A=(1,-4) i B=(2,3). Odcinek AB ma długość_5√2

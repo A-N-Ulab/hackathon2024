@@ -45,8 +45,15 @@ def readStringAfterUnderscore(path, lineNum):
     except:
         return None
 
-if __name__ == "__main__":
-    path = "./static/lessons/lesson1.txt"
-    print(readTypesOfLines(path))
-    print(readLine(path, 1))
-    print(readStringAfterUnderscore(path, 4))
+def extractTextAfterColon(text):
+    match = re.match(r'^(.*?);(.*)', text)
+    if match:
+        return match.group(2).strip()
+    return None
+
+#if __name__ == "__main__":
+#    path = "./static/lessons/lesson1.txt"
+#    print(readTypesOfLines(path))
+#    print(readLine(path, 1))
+#    print(readStringAfterUnderscore(path, 4))
+#    print(extractTextAfterColon(readLine(path, 1)))

@@ -66,3 +66,15 @@ main{
 .slideContent{
     text-align: center;
 }
+
+.equ{
+    max-width: 40%;
+    max-height: 60vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+em{
+    color: red;
+}

@@ -1,6 +1,6 @@
-Info: Twierdzenie Okrąg o środku w punkcie (a,b) i promieniu r>0, jest zbiorem wszystkich punktów płaszczyzny (x,y) spełniających równanie: (x-a)^2+(y-b)^2=r^2 Jest to równaniem okręgu w postaci kanonicznej. /photolink5
+Info: Twierdzenie Okrąg o środku w punkcie (a,b) i promieniu r>0, jest zbiorem wszystkich punktów płaszczyzny (x,y) spełniających równanie: (x-a)^2+(y-b)^2=r^2 Jest to równaniem okręgu w postaci kanonicznej. ;img5
 Task: Dany jest okrąg o równaniu (x+3)^2+(y-4)^2=25 . Środkiem S tego okręgu jest punkt_S=(-3,4)
 Task: Odległość między środkami okręgów o równaniach (x+1)^2+(y-2)^2=9 oraz x^2+y^2=10 jest równa_√5
-Task: Okrąg o równaniu (x+2)^2+(y-1)^2=13 ma promień równy+√13
+Task: Okrąg o równaniu (x+2)^2+(y-1)^2=13 ma promień równy_√13
 Task: Dane są punkty S=(2,1), M=(6,4). Równanie okręgu o środku S i przechodzącego przez punkt M ma postać_(x−2)^2+(y-1)^2=25
 Task: Równanie (x+6)2+y2=4 opisuje okrąg o środku w punkcie S i promieniu r. Wówczas_S=(-6,0), r=2

@@ -1,3 +1,13 @@
+# CHLOE MATEMATYCZNA ŻABA
+
+<p align="center">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Chloe-Matematyczna_%C5%BBaba-darkgreen">
+  <img alt="Static Badge" src="https://img.shields.io/badge/HackYeah-2024-pink">
+  <img alt="Static Badge" src="https://img.shields.io/badge/ANUlab-TNST-blue">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/A-N-Ulab/hackathon2024">
+  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/A-N-Ulab/hackathon2024">
+</p>
+
 # To repozytorium
 To repozytorium jest jednocześnie sposoben na udostępnienie kodu Chloe, ale także służyło jako nasze repo przy jej tworzeniu. Dlatego w poniższej instrukcji będzie wymieniany tylko folder `Chloe` z jego podfolderami.
 

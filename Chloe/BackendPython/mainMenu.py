@@ -3,7 +3,7 @@ from collections import Counter
 
 def readTypesOfLines(path):
     word_counter = Counter()
-    with open(path, 'r') as file:
+    with open(path, 'r', encode='utf-8') as file:
         for line in file:
             match = re.match(r'^(.*?):(.*)', line)
             if match:

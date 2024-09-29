@@ -13,24 +13,28 @@
     <link rel="stylesheet" href="../static/buttons.css">
     <script>
         function updateForward() {
-            fetch('/userUpdateB')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('chujWie').innerHTML = data.new_content;
-        });
+            if ("{{ updateForward }}" == "True") {
+                fetch('/userUpdateF')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('chujWie').innerHTML = data.new_content;
+                });
+            }
         }
         function updateBackward() {
-            fetch('/userUpdateF')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('chujWie').innerHTML = data.new_content;
-        });
+            if ("{{ updateBackward }}" == "True") {
+                fetch('/userUpdateB')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('chujWie').innerHTML = data.new_content;
+                });
+            }
         }
     </script>
 
     <title>Main</title>
 </head>
-<body>
+<body onload="updateBackward(), updateForward()" >
 
 <nav>
     <div class="navbar">
@@ -54,24 +58,23 @@
         </div>
 
         <div class="controls">
-            <button name="buttonMain" onclick="updateForward()" class="prev">{{textPrevious}}</button>
-            <button name="buttonMain" onclick="updateBackward()" class="next">{{textNext}}</button>
+        <form method="post">
+            <button class="prev" name="button" value="prev">{{textPrevious}}</button>
+            <button class="next" name="button" value="next">{{textNext}}</button>
+        </form>
         </div>
     </div>
 <nav class="sidebar">
     <title>Tematy Lekcji</title>
     <ul id="lessonsList">
     <form method="post">
-        <button class="{{classLesson1}}" id="less1" name="button" value="less1">lekcja 1 - długość odcinka</button>
-        <button class="{{classLesson2}}" id="less2" name="button" value="less2">lekcja 2 - środek odcinka</button>
-        <button class="{{classLesson3}}" id="less3" name="button" value="less3">lekcja 3 - równanie prostej</button>
-        <button class="{{classLesson4}}" id="less4" name="button" value="less4">lekcja 4 - równanie okręgu</button>
+        <button class="{{classLesson1}}" id="less1" name="button" value="lesson1">lekcja 1 - długość odcinka</button>
+        <button class="{{classLesson2}}" id="less2" name="button" value="lesson2">lekcja 2 - środek odcinka</button>
+        <button class="{{classLesson3}}" id="less3" name="button" value="lesson3">lekcja 3 - równanie prostej</button>
+        <button class="{{classLesson4}}" id="less4" name="button" value="lesson4">lekcja 4 - równanie okręgu</button>
     </form>
     </ul>
 </nav>
 </main>
-    
-
-
 </body>
 </html>

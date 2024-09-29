@@ -6,13 +6,13 @@ class HackathonApp:
         self.app = Flask(__name__)
         self.setup_routes()
         self.counter = 0
+        self.lastLesson = 0
         self.msgPrev = "Poprzedni"
         self.msgNext = "Następny"
         self.dictOfTasks = {}
-        self.ls1 = "lBt"
-        self.ls2 = "locked"
-        self.ls3 = "locked"
-        self.ls4 = "locked"
+        self.classList = ["lBt", "locked", "locked", "locked"]
+        self.numAll = 0
+        self.repeat = True
 
     def setup_routes(self):
         self.app.add_url_rule('/', 'logging', self.logging, methods=['GET', 'POST'])
@@ -65,53 +65,65 @@ class HackathonApp:
 
 
 
-
+    #=== Main menu ===
     def main(self):
         if request.method == 'POST':
-            if request.form['button'] == 'less1':
-                self.dictOfTasks = readTypesOfLines('static/lessons/lesson1.txt')
+            if request.form['button'] == 'lesson1' or request.form['button'] == 'lesson2' or request.form['button'] == 'lesson3' or request.form['button'] == 'lesson4':
+                nameOfLesson = request.form['button']
+                self.dictOfTasks = readTypesOfLines("static/lessons/" + nameOfLesson + ".txt")
+                self.numAll = self.dictOfTasks["Task"] + self.dictOfTasks["Info"]
                 self.counter = 0
-            elif request.form['button'] == 'less2':
-                self.dictOfTasks = readTypesOfLines('static/lessons/lesson2.txt')
-                self.counter = 0
-            elif request.form['button'] == 'less3':
-                self.dictOfTasks = readTypesOfLines('static/lessons/lesson3.txt')
-                self.counter = 0
-            elif request.form['button'] == 'less4':
-                self.dictOfTasks = readTypesOfLines('static/lessons/lesson4.txt')
-                self.counter = 0
+                self.repeat = True
+                self.msgNext = "Następny"
 
-            self.numAll = self.dictOfTasks['Info'] + self.dictOfTasks['Task'] 
+
+            if request.form['button'] == 'prev':
+                if self.counter > 0:
+                    self.counter += -1
+                return render_template('main.html', textPrevious=self.msgPrev, textNext=self.msgNext, 
+                               classLesson1=self.classList[0], classLesson2=self.classList[1], 
+                               classLesson3=self.classList[2], classLesson4=self.classList[3],
+                               updateForward=False, updateBackward=True)
+            
+            elif request.form['button'] == 'next':
+                self.counter += 1
+                if self.counter == self.numAll:
+                    self.msgNext = "Koniec"
+                elif self.counter == self.numAll + 1 and self.repeat == True:
+                    try:
+                        self.classList[self.lastLesson+1] = "lBt"
+                    except:
+                        self.classList[self.lastLesson] = "lBt"
+                    self.lastLesson = self.lastLesson+1
+                    self.repeat = False
+                elif self.counter > self.numAll + 1:
+                    self.counter = self.numAll
+
+                return render_template('main.html', textPrevious=self.msgPrev, textNext=self.msgNext, 
+                               classLesson1=self.classList[0], classLesson2=self.classList[1], 
+                               classLesson3=self.classList[2], classLesson4=self.classList[3],
+                               updateForward=True, updateBackward=False)
+            
+
         return render_template('main.html', textPrevious=self.msgPrev, textNext=self.msgNext, 
-                               classLesson1=self.ls1, classLesson2=self.ls2, 
-                               classLesson3=self.ls3, classLesson4=self.ls4)
-
+                               classLesson1=self.classList[0], classLesson2=self.classList[1], 
+                               classLesson3=self.classList[2], classLesson4=self.classList[3],
+                               updateForward=False, updateBackward=False)
 
     #=== Backward button ===
     def update_main_b(self):
-        #=== Counter control ===
-        if self.counter > 0:
-            self.counter -= 1
-        
-          
         return jsonify(new_content="""
-        <div class="slide">
-            <h2 class="slideTitle">{title}</h2>
-            <p class="slideContent">{content}</p>
-        </div>
-        """.format(title=self.title, content=self.content))
+                    <div class="task">
+                        <p class="taskContent">BACK {counter} {dict} {numAll}</p>
+                    </div>""".format(counter=self.counter, dict=self.dictOfTasks, numAll=self.numAll))
 
     #=== Forward button ===
     def update_main_f(self):
-        #=== Counter control ===
-        self.counter += 1
-        if self.counter == self.numAll:
-            self.msgNext = "Zakończ"
-        elif self.counter > self.numAll:
-            self.ls2 = "lBt"
+        return jsonify(new_content="""
+                    <div class="task">
+                        <p class="taskContent">FORW {counter} {dict} {numAll}</p>
+                    </div>""".format(counter=self.counter, dict=self.dictOfTasks, numAll=self.numAll))
 
-        #return 
-        return jsonify()
 
 
     def run(self):

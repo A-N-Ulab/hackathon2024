@@ -74,7 +74,9 @@ class HackathonApp:
                 self.numAll = self.dictOfTasks["Task"] + self.dictOfTasks["Info"]
                 self.counter = 0
                 self.repeat = True
-                self.msgNext = "Następny"
+                self.msgNext = "Rozpocznij"
+                self.msgPrev = "-"
+
 
 
             if request.form['button'] == 'prev':
@@ -87,6 +89,8 @@ class HackathonApp:
             
             elif request.form['button'] == 'next':
                 self.counter += 1
+                self.msgPrev = "Poprzedni"
+                self.msgNext = "Następny"
                 if self.counter == self.numAll:
                     self.msgNext = "Koniec"
                 elif self.counter == self.numAll + 1 and self.repeat == True:
@@ -112,16 +116,28 @@ class HackathonApp:
 
     #=== Backward button ===
     def update_main_b(self):
-        return jsonify(new_content="""
+        if self.counter <= self.dictOfTasks["Info"]:
+            return jsonify(new_content="""
                     <div class="task">
-                        <p class="taskContent">BACK {counter} {dict} {numAll}</p>
+                        <p class="taskContent">BACKINFO {counter} {dict} {numAll}</p>
+                    </div>""".format(counter=self.counter, dict=self.dictOfTasks, numAll=self.numAll))
+        else:
+            return jsonify(new_content="""
+                    <div class="task">
+                        <p class="taskContent">BACKTASK {counter} {dict} {numAll}</p>
                     </div>""".format(counter=self.counter, dict=self.dictOfTasks, numAll=self.numAll))
 
     #=== Forward button ===
     def update_main_f(self):
-        return jsonify(new_content="""
+        if self.counter <= self.dictOfTasks["Info"]:
+            return jsonify(new_content="""
                     <div class="task">
-                        <p class="taskContent">FORW {counter} {dict} {numAll}</p>
+                        <p class="taskContent">FORWINFO {counter} {dict} {numAll}</p>
+                    </div>""".format(counter=self.counter, dict=self.dictOfTasks, numAll=self.numAll))
+        else:
+            return jsonify(new_content="""
+                    <div class="task">
+                        <p class="taskContent">FORWTASK {counter} {dict} {numAll}</p>
                     </div>""".format(counter=self.counter, dict=self.dictOfTasks, numAll=self.numAll))
 
 

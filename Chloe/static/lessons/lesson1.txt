@@ -1,8 +1,8 @@
-Info: Długość odcinka o końcach w punktach A=(x1,y1) oraz B=(x2,y2) wyraża się wzorem;img1
-Info: Powyższe wynika z twierdzenia Pitagorasa dla trójkąta prostokątnego(tylko tutaj operujemy układem współrzędnych jako danymi wejściowymi).;img2
-Info: Przykład zadania:  Oblicz długość odcinka AB, gdzie A=(1,2), B=(3,7).;img3
-Task: Dane są punkty P=(-2,-2), Q=(3,3). Odległość punktu P od punktu Q jest równa_5√2
-Task: Długość odcinka AB, którego wierzchołki mają współrzędne A=(-3,-2) i B=(-1,4), jest równa_2√10
-Task: Dane są punkty A=(1,-4) i B=(2,3). Odcinek AB ma długość_5√2
-Task: Na okręgu o środku S=(-6,1) leży punkt A=(-2,4). Promień tego okręgu jest równy_5
-Task: Punkty B=(-2,4) i C=(5,1) są dwoma sąsiednimi wierzchołkami kwadratu ABCD. Pole tego kwadratu jest równe_58
+Info: Długość odcinka o końcówkach (nie śmiać się zwyrodnialce...) w punktach A=(x1,y1) i B=(x2,y2) można opkreślić takim oto pięknym wzorem:;img1
+Info: Poprzedni wzór wynika z twierdzenia Pitagorasa (tego co to myślałeś, że nie użyjesz) dla trójkąta prostokątnego, bo dla innego twierdzenie Pitagorasa NIE DZIAŁA. Jedyną różnicą jest to, że tutaj mamy układ współrzędnych, a naszą przeciwpostokątną jest tak naprawdę wektor.;img2
+Info: Przykładowe zadanie z internetów: Oblicz długość odcinka AB, gdzie A=(1,2), B=(3,7).;img3
+Task: Teraz zadania dla Ciebie, weź sobie kartkę. A oto pierwsze: Dane są punkty P=(-2,-2), Q=(3,3). Ile wynośi odległość punktu P od punktu Q?_5√2
+Task: Kolejne , Ile jest równa długość odcinka AB, którego wierzchołki mają współrzędne A=(-3,-2) i B=(-1,4)_2√10
+Task: I jeszcze jedno, Dane są punkty A=(1,-4) i B=(2,3). Jaką długość ma odcinek AB?_5√2
+Task: I kolejne, CIER... przepraszam, ponosi mnie czasamip. Na okręgu o środku S=(-6,1) leży punkt A=(-2,4). Ile jest równy promień tego okręgu?_5
+Task: Ostatnie na dziś. Punkty B=(-2,4) i C=(5,1) są dwoma sąsiednimi wierzchołkami kwadratu ABCD. Ile wynosi pole tego kwadratu?_58

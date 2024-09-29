@@ -1,4 +1,4 @@
-Info: Długość odcinka o końcówkach (nie śmiać się zwyrodnialce...) w punktach A=(x1,y1) i B=(x2,y2) można opkreślić takim oto pięknym wzorem:;img1
+Info: Długość odcinka o końcówkach (nie śmiać się zwyrodnialce...) w punktach A=(x1,y1) i B=(x2,y2) można określić takim oto pięknym wzorem:;img1
 Info: Poprzedni wzór wynika z twierdzenia Pitagorasa (tego co to myślałeś, że nie użyjesz) dla trójkąta prostokątnego, bo dla innego twierdzenie Pitagorasa NIE DZIAŁA. Jedyną różnicą jest to, że tutaj mamy układ współrzędnych, a naszą przeciwpostokątną jest tak naprawdę wektor.;img2
 Info: Przykładowe zadanie z internetów: Oblicz długość odcinka AB, gdzie A=(1,2), B=(3,7).;img3
 Task: Teraz zadania dla Ciebie, weź sobie kartkę. A oto pierwsze: Dane są punkty P=(-2,-2), Q=(3,3). Ile wynośi odległość punktu P od punktu Q?_5√2
